@@ -28,7 +28,7 @@ Cash Play is an interactive web-based investment simulation game where players m
 
 ### Frontend Only (Simple Setup)
 1. Clone this repository
-2. Open `index.html` in your web browser
+2. Open `pages/index.html` in your web browser
 3. Start playing! (Leaderboard will use localStorage)
 
 ### Full Setup with Database (Recommended)
@@ -45,9 +45,10 @@ Cash Play is an interactive web-based investment simulation game where players m
 4. Serve the frontend (in a new terminal):
    ```bash
    # Using Node.js
-   npx serve . -l 8000
+   npx serve ./pages -l 8000
    
    # Or using Python
+   cd pages
    python -m http.server 8000
    ```
 5. Open http://localhost:8000 in your browser
@@ -56,8 +57,9 @@ Cash Play is an interactive web-based investment simulation game where players m
 
 ```
 CashPlay/
-├── index.html              # Welcome page
-├── new_game.html           # Main game interface
+├── pages/
+│   ├── index.html          # Welcome page
+│   └── game.html           # Main game interface
 ├── backend/
 │   ├── server.js           # Express.js backend
 │   ├── package.json        # Node.js dependencies
